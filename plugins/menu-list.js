@@ -14,11 +14,11 @@ let { perfomance } = require('perf_hooks')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before:`
-┏━━「 ${wm} 」━⬣
-┃⬡📊 *Version*: %version
-┃⬡🗃️ *Lib*: Baileys-MD
-┃⬡🧪 *Mode:* ${global.opts['self'] ? 'Self' : 'publik'}
-┃⬡⏰ *Uptime:* %uptime
+┏━━「 𝙁𝘼𝘾𝙃𝙍𝙄𝘽𝙊𝙏-𝙈𝘿 」━⬣
+┃⬡ 📊 *Version*: %version
+┃⬡ 🗃️ *Lib*: Baileys-MD
+┃⬡ 🧪 *Mode:* ${global.opts['self'] ? 'Self' : 'publik'}
+┃⬡ ⏰ *Uptime:* %uptime
 ┗⬣
 ┏━━⬣ 𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍
 ┃⬡ 📇 *Name*:  %name 
@@ -31,11 +31,9 @@ const defaultMenu = {
 ┃⬡ 💲Premium : ${global.prem ? '✅' : '❌'}
 ┗⬣
 ┏━━⬣ 𝙄𝙉𝙁𝙊 𝙎𝙏𝘼𝙏𝙐𝙎
-┃
 ┃⬡ *${Object.keys(global.db.data.users).length}* Pengguna
 ┃⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
 ┃⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-┃
 ┗⬣
   %readmore`.trimStart(), 
   header: '┏━━「 %category 」━⬣',
@@ -192,7 +190,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let waktuwib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
 let tulisan = `
 ${ucapan()} ${name}. Have a great day！
-Terimakasih Atas Kunjungan Anda`.trim()
+FachriBot By Fachri`.trim()
 let sangek = `Berikut adalah list Menu Bot. klik pada "Click Here!" untuk melihat list menu.`
 let totalreg = Object.keys(global.db.data.users).length
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
@@ -209,11 +207,11 @@ let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(
     if (teks == '404') {
       const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fromObject({
         listMessage: {
-            title: `*Hai* ${name}`,
+            title: `*Hai*, Kak ${name}`,
             description: `${ucapan()}\n*Silahkan Pilih List Menu*\n*Di Bawah Ya*`,
             buttonText: 'LIST MENU',
             listType: 1,
-            footerText: "Silahkan Tekan Tombol \"LIST MENU\" Untuk Melihat Menu Bot\n\nJika Menemukan Bug/Kesulitan Dalam Penggunaan Bot Silahkan Laporkan/Tanyakan Kepada Owner",
+            footerText: "Silahkan Tekan Tombol "LIST MENU" Untuk Melihat Menu Bot\n\nJika Menemukan Bug/Kesulitan Dalam Penggunaan Bot Silahkan Laporkan/Tanyakan Kepada Owner",
             mtype: 'listMessage',
             sections: [
               {
