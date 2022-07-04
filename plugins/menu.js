@@ -31,9 +31,9 @@ let wktum = moment.tz('Asia/Jakarta').format('mm')
 let wktus = moment.tz('Asia/Jakarta').format('ss')
 const defaultMenu = {
   before:`
-────━┅ *D A S H B O A R D* ┅━────
+────━┅ *DASHBOARD* ┅━────
   
-    「 *U S E R* 」
+    「 𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍 」
 ⟩⟩ *Name:* %name
 ⟩⟩︎ *Status:* -
 ⟩⟩ *Limit:* %limit
@@ -42,13 +42,13 @@ const defaultMenu = {
 ⟩⟩ *Xp:* %exp / %maxexp
 ⟩⟩ *Total Xp:* %totalexp
 
-  「 *T O D A Y* 」
+  「 𝙄𝙉𝙁𝙊 𝙏𝙊𝘿𝘼𝙔 」
 ⟩⟩ *Days:* %week %weton
 ⟩⟩ *Date:* %date
 ⟩⟩ *Islamic Date:* %dateIslamic
 ⟩⟩ *Time:* %time
 
-  「 *I N F O* 」
+  「 𝙄𝙉𝙁𝙊 𝘽𝙊𝙏 」
 ⟩⟩ *Bot Name:* ${wm}
 ⟩⟩ *Lib*: Baileys-MD
 ⟩⟩ *${Object.keys(global.db.data.users).length}* *Pengguna*
@@ -57,14 +57,14 @@ const defaultMenu = {
 ⟩⟩ *Mode:* ${global.opts['self'] ? 'Self' : 'publik'}
 ⟩⟩ *Database:* %rtotalreg dari %totalreg
 
-⃝▣「 *I N F O  C M D* 」
+❏「 *INFO CMD* 」
 │ *Ⓟ* = Premium
 │ *Ⓛ* = Limit
-▣──···
+❏──···
   %readmore`.trimStart(), 
-  header: '⃝▣             「 *%category* 」',
- body: '│☂︎ %cmd %isPremium %islimit',
- footer: '▣──···\n',
+  header: '❏––––––『 %category 』––––––',
+ body: '┊☂︎ %cmd %isPremium %islimit',
+ footer: '┗━═┅═━––––––๑\n',
   after: ``,
 }
 
@@ -235,7 +235,7 @@ let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(
     }
   })
     if (teks == '404') {
-  const q = {
+const fkontak = {
 	"key": {
     "participants":"0@s.whatsapp.net",
 		"remoteJid": "status@broadcast",
@@ -249,22 +249,39 @@ let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(
 	},
 	"participant": "0@s.whatsapp.net"
 }
-let menuu = `❏  *I N F O*
-▸ *${ucapan()}*
-▸ *Name:* ${name}
-▸ *Tag:* ${tag}
-▸ *Limit:* ${limit}
-▸ *Role:* ${role}
-▸ *Premium:* ${global.prem ? '✅' : '❌'}
-▸ *Date:* ${week} ${weton} ${date}
-▸ *Time:* ${wib}`
+const ftroli = {
+    key : {
+    remoteJid: 'status@broadcast',
+    participant : '0@s.whatsapp.net'
+    },
+    message: {
+    orderMessage: {
+    itemCount : 2022,
+    status: 1,
+    surface : 1,
+    message: `Hai Kak ${name}!`, 
+    orderTitle: `Menu ▸`,
+    thumbnail: await (await fetch(fla + 'Menu')).buffer(), //Gambarnye
+    sellerJid: '0@s.whatsapp.net' 
+    }
+    }
+    }
+let menuu = `❏  𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍
+✾ *${ucapan()}*
+✾ *Name:* ${name}
+✾ *Tag:* ${tag}
+✾ *Limit:* ${limit}
+✾ *Role:* ${role}
+✾ *Premium:* ${global.prem ? '✅' : '❌'}
+✾ *Date:* ${week} ${weton} ${date}
+✾ *Time:* ${wib}`
 const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fromObject({
         listMessage: {
             title: ``,
             description: menuu,
             buttonText: 'LIST MENU',
             listType: 1,
-            footerText: "Created By Pilar",
+            footerText: "© Created By Fachri",
             mtype: 'listMessage',
             sections: [
               {
@@ -380,7 +397,7 @@ const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fro
               "participant": m.sender,
               "quotedMessage": m.message
             }
-    }}), { userJid: m.participant || m.key.remoteJid, quoted: q });
+    }}), { userJid: m.participant || m.key.remoteJid, quoted: ftroli });
     return await conn.relayMessage(
         m.key.remoteJid,
         template.message,
@@ -443,38 +460,38 @@ const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fro
            videoMessage: message.videoMessage,
            hydratedContentText: text.trim(),
            hydratedFooterText: wm,
-           hydratedButtons: [{
+           hydratedButtons: [{           	           	
             urlButton: {
-               displayText: 'MY WEBSITE',
-               url: 'https://pilarv2.github.io/'
+               displayText: 'Website Creator',
+               url: 'https://fachriweb.vercel.app',
              }
 
            },
              {
-              urlButton: {
-               displayText: 'CHAT OWNER',
-               PhoneNumber: 'https://wa.me/6289625556161'
+             urlButton: {
+               displayText: 'Group Bot', 
+               url: 'https://chat.whatsapp.com/GimZmhA2XTQFfPXk4XMrv6',
              }
+
            },
-  
-           {
-           quickReplyButton: {
-              displayText: 'INFO',
-              id: '.info',
-            }
-            
-          },
-           {
-           quickReplyButton: {
-              displayText: 'SPEED',
-              id: '.speed',
-            }
-      
+               {
+             quickReplyButton: {
+               displayText: 'Owner',
+               id: '.owner',
+             }
+
+           },
+               {
+             quickReplyButton: {
+               displayText: 'Donasi',
+               id: '.donasi',
+             }
+
            },
            {
              quickReplyButton: {
-               displayText: 'SCRIPT',
-               id: '.sc',
+               displayText: 'Credits',
+               id: '.tqto',
              }
            }]
          }
