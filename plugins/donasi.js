@@ -5,21 +5,19 @@ let handler = async (m) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
     let user = global.db.data.users[who]
-let anu = `*─────� DONATE 」 ───*
+let ye = `@${m.sender.split`@`[0]}`
+let anu = `*───── [ *DONATE* ] ─────*
 
-Hai 👋
+Hai kak, ${ye}👋
 Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
 ┌〔 Donasi • Emoney 〕
-├🏧 089625556161 (OVO/Dana/GoPay)
+├ *085713041886* (Dana)
 └────
 Berapapun donasi kalian akan sangat berarti 👍
+*Contact person Owner:*
+wa.me/6285713041886 (Owner)
 
-Arigatou!
-
-Contact person Owner:
-wa.me/6289625556161 (Owner)
-
-*donasi via follow github juga boleh*`
+*donasi via follow ig juga boleh*`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
@@ -29,8 +27,8 @@ wa.me/6289625556161 (Owner)
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'MY GITHUB',
-               url: 'github.com/PilarV2'
+               displayText: 'instagram',
+               url: 'instagram.com/sfdesign.id'
              }
 
            },
