@@ -29,11 +29,11 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-┏━━「 𝙎𝙃𝙄𝙍𝙊-𝙈𝘿 」━⬣
-┃⬡📊 *Version*: %version
-┃⬡🗃️ *Lib*: Baileys-MD
-┃⬡🧪 *Mode:* ${global.opts['self'] ? 'Self' : 'publik'}
-┃⬡⏰ *Uptime:* %uptime
+┏━━「 𝙁𝘼𝘾𝙃𝙍𝙄𝘽𝙊𝙏-𝙈𝘿 」━⬣
+┃⬡ 📊 *Version*: %version
+┃⬡ 🗃️ *Lib*: Baileys-MD
+┃⬡ 🧪 *Mode:* ${global.opts['self'] ? 'Self' : 'publik'}
+┃⬡ ⏰ *Uptime:* %uptime
 ┗⬣
 ┏━━⬣ 𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍 ━⬣
 ┃⬡ 📇 *Name*:  %name 
@@ -55,7 +55,7 @@ const defaultMenu = {
     body: '┃ ◇ %cmd %islimit %isPremium',
     footer: '┗━━━━━━⬣\n',
     after: `
-*ꜱʜɪʀᴏ-ᴍᴅ@^%version*
+*FachriBot-MD@^%version*
 ${'```%npmdesc```'}
 `,
 }
@@ -176,7 +176,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
              {
              urlButton: {
                displayText: 'Owner',
-               PhoneNumber: 'https://wa.me/6287892711054'
+               PhoneNumber: 'https://wa.me/6285713041886'
              }
 
            },
