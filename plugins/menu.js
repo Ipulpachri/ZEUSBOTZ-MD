@@ -266,15 +266,16 @@ const ftroli = {
     }
     }
     }
-let menuu = `❏  𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍
-✾ *${ucapan()}*
-✾ *Name:* ${name}
-✾ *Tag:* ${tag}
-✾ *Limit:* ${limit}
-✾ *Role:* ${role}
-✾ *Premium:* ${global.prem ? '✅' : '❌'}
-✾ *Date:* ${week} ${weton} ${date}
-✾ *Time:* ${wib}`
+let menuu = `❏––––––「 *FACHRIBOT-MD* 」––––––
+│⬡ *${ucapan()}*
+│⬡ *Name:* ${name}
+│⬡ *Tag:* ${tag}
+│⬡ *Limit:* ${limit}
+│⬡ *Role:* ${role}
+│⬡ *Premium:* ${global.prem ? '✅' : '❌'}
+│⬡ *Date:* ${week} ${weton} ${date}
+│⬡ *Time:* ${wib}
+┗━═┅═━––––––⬣`
 const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fromObject({
         listMessage: {
             title: ``,
