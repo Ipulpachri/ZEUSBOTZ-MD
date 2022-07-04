@@ -21,8 +21,8 @@ let wktus = moment.tz('Asia/Jakarta').format('ss')
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
 }
-global.owner = ['6289625556161','62831433937633', '62896255561617'] // Put your number here
-global.mods = [] // Want some help?
+global.owner = ['6285713041886','6285713041886', '6285713041886'] // Put your number here
+global.mods = ['6285713041886'] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -65,16 +65,16 @@ global.APIKeys = { // APIKey Here
 
 // Sticker WM
 global.stiker_wait = 'Stiker sedang dibuat'
-global.packname = 'ZEUSBOTZ-MD'
-global.author = `By Pilar`
-global.wm = 'ZEUS BOT - MD' 
+global.packname = ''
+global.author = `© 𝙁𝙖𝙘𝙝𝙧𝙞𝘽𝙤𝙩-𝙈𝘿`
+global.wm = '© 𝙁𝘼𝘾𝙃𝙍𝙄𝘽𝙊𝙏-MDོ' 
 global.watermark = wm
-global.instagram = 'https://instagram.com/not_pilar32'
+global.instagram = 'https://instagram.com/sfdesign_id'
 global.botdate = `❏ ${wktuh} H  ${wktum} M  ${wktus} S\n❏ ${week} ${date}`
-global.media = 'https://telegra.ph/file/ccb2359d3925fd7af58cd.jpg'
-global.github = 'https://github.com/PilarV2'
+global.media = 'https://telegra.ph/file/f32f1c40016063c2f2b1a.jpg'
+global.github = 'https://github.com/Ipulpachri'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&doScale=true&scaleWidth=500&scaleHeight=500&fontsize=100&fillTextType=0&backgroundColor=%23401620&text='
-global.wait = '_*L O A D I N G*_'
+global.wait = '_*Tunggu Sedang di Proses...*_'
 global.eror = '_*Server Error*_'
 global.benar = 'Benar ✅\n'
 global.salah = 'Salah ❌\n'
